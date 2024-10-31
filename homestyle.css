@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll 
+    */
+    padding-top: 6em;
+    padding-left: 0.5rem;
+}
+
+.hero {
+    background-image: url("Images/home-hero-bg-2xl.png");
+    /* Replace with your actual image URL */
+    background-size: cover;
+    /* Cover the entire viewport */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-attachment: scroll;
+    /* Make the background scrollable */
+    position: relative;
+}
+
+/* Navbar Start */
+.navbar {
+    background-color: white;
+    /* Set navbar background color to white */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Add box shadow */
+    /* padding-bottom: 0rem; */
+}
+
+
+.navbar-brand {
+    margin-right: 0.1rem;
+}
+
+#logo1 img {
+    width: 4rem;
+    height: auto;
+}
+
+#logo2 img {
+    width: 15rem;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    color: black !important;
+    /* Set nav font color to black */
+    font-size: 18px;
+    /* Increase font size */
+    padding-top: 1rem !important;
+    /* Adjust padding to align with the logo */
+    padding-bottom: 1rem !important;
+    /* Adjust padding to align with the logo */
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: #2506ad !important;
+    /* Active link color */
+    text-decoration: underline !important;
+    /* Underline active link */
+}
+
+.navbar-nav {
+    /* width: 100%; */
+    justify-content: center;
+    /* Center the nav items */
+    margin-left: 0.5rem;
+    padding-left: 5rem;
+    /* white-space: nowrap; */
+}
+
+.navbar-collapse {
+    justify-content: center;
+    /* Center the content in the navbar */
+}
+
+.navigation .ml-auto {
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Center vertically */
+    margin-right: 1rem;
+
+}
+
+/* .navigation .btn {
+    white-space: nowrap;
+    transition: transform 0.2s;
+
+} */
+
+.navbar .login {
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    transition: transform 0.2s;
+    /* Smooth transition for scaling */
+    color: #2506ad;
+    /* outline: #2506ad; */
+    padding: 5px 13px;
+    font-size: 16px;
+    border: 2px solid #2506ad; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.navbar .signup {
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    transition: transform 0.2s;
+    /* Smooth transition for scaling */
+    color: white;
+    /* outline: #2506ad; */
+    padding: 5px 13px;
+    font-size: 16px;
+    background-color: #2506ad;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.navigation .btn:hover {
+    transform: scale(1.1);
+    /* Increase size on hover */
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+        /* Stack items vertically */
+        text-align: center;
+        /* Center text */
+        padding: 0;
+    }
+
+    .navigation .ml-auto {
+        margin-left: 0;
+        /* Remove left margin for alignment */
+        margin-top: 10px;
+        /* Add space above buttons */
+        justify-content: center;
+        /* Center buttons */
+        width: 100%;
+        /* Make buttons take full width */
+    }
+
+    .navigation .ml-auto .btn {
+        margin: 5px 0;
+        /* Add vertical margin for buttons */
+    }
+}
+
+/* Hero Banner Start*/
+
+/* #home{
+    padding-top: 60px;
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* Full height of the viewport */
+    position: relative;
+    /* To position the content correctly */
+    z-index: 1;
+    /* Ensure the content appears above the background */
+}
+
+.row h1 {
+    font-size: 2.5rem;
+    /* Decreased size */
+    margin-bottom: 1rem;
+    color: #000;
+    /* Black color */
+    font-weight: bold;
+    /* Bold text */
+}
+
+.row h2 {
+    font-size: 3rem;
+    /* Increased size */
+    margin-bottom: 2rem;
+    color: #000;
+    /* Black color */
+    font-weight: bold;
+    /* Bold text */
+}
+
+.row p {
+    font-size: 1rem;
+    /* Decreased size */
+    /* margin-bottom: 25rem; */
+    text-align: center;
+    color: #000;
+    /* Black color */
+    font-weight: bold;
+    /* Bold text */
+}
+
+.row .btn {
+    margin-bottom: 25rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    background-color: #2506ad;
+    box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s;
+    /* Smooth transition for scaling */
+}
+
+.row .btn:hover {
+    /* opacity: 0.8; */
+    background-color: #1a047e;
+    transform: scale(1.1);
+    /* Increase size on hover */
+}
+
+/* Add some height to the page to demonstrate scrolling */
+.spacer {
+    height: 10vh;
+    /* Height of 200% of the viewport height */
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+    .row h1 {
+        font-size: 2rem;
+        /* Adjusted for smaller screens */
+    }
+
+    .row h2 {
+        font-size: 2.5rem;
+        /* Adjusted for smaller screens */
+    }
+
+    .row p {
+        font-size: 0.9rem;
+        /* Adjusted for smaller screens */
+    }
+
+    .row .btn {
+        margin-bottom: 30rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .row h1 {
+        font-size: 1.5rem;
+        /* Adjusted for smaller screens */
+    }
+
+    .row h2 {
+        font-size: 2rem;
+        /* Adjusted for smaller screens */
+    }
+
+    .row p {
+        font-size: 0.8rem;
+        /* Adjusted for smaller screens */
+    }
+
+    /* .row .btn {
+        margin-bottom: 29rem;
+    } */
+}
+
+/* @media only screen and(max-width:390px) and(max-height:844px) {
+    .row .btn {
+        margin-bottom: 25rem;
+    }
+} */
+
+
+/* Preproduct Start */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.preproduct {
+    background-color: #fff;
+    /* max-width: 1500px; */
+    margin: 0 auto;
+    padding-top: 25rem;
+}
+
+.product-card {
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    /* padding: 20px; */
+    overflow: hidden;
+}
+
+.image-container {
+    background-image: linear-gradient(#130d24, rgba(0, 3, 66, .1));
+    /* Dark background color for image */
+    padding: 10px;
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
+
+.product-details {
+    padding: 20px;
+}
+
+.product-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 15px;
+    min-height: 50px;
+    text-align: left !important
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-rating i {
+    color: #ffc107;
+    margin-right: 5px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left !important;
+}
+
+.product-specs {
+    margin-bottom: 20px;
+}
+
+.product-specs li {
+    margin-bottom: 5px;
+}
+
+.shop-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #2506ad;
+    box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    /* Smooth transition for scaling */
+}
+
+.shop-button:hover {
+    background-color: #1a047e;
+    transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+    .preproduct {
+        padding-top: 45rem;
+        /* Adjust the padding value as needed */
+    }
+}
+
+@media (max-width: 768px) {
+    .preproduct {
+        padding-top: 50rem;
+        /* Adjust the padding value as needed */
+    }
+}
+
+@media (max-width: 576px) {
+    .preproduct {
+        padding-top: 100rem;
+        /* Adjust the padding value as needed */
+    }
+}
