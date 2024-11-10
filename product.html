@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="productstyle.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Custom Core Product</title>
+
+</head>
+
+<body>
+
+<!-- The Modal -->
+<div class="modal fade" id="loginModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+aria-labelledby="loginModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel"><i class="fas fa-user"></i> Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your username"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                        required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- The Sign Up Modal -->
+<div class="modal fade" id="signupModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLabel"><i class="fas fa-user-plus"></i> Sign Up</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form class="signup-form">
+                <div class="form-group">
+                    <label for="newUsername">Username</label>
+                    <input type="text" class="form-control" id="newUsername" placeholder="Choose a username" required>
+                </div>
+                <div class="form-group">
+                    <label for="newEmail">Email</label>
+                    <input type="email" class="form-control" id="newEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">Password</label>
+                    <input type="password" class="form-control" id="newPassword" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+
+    <!-- Buy Now Modal -->
+    <div class="modal fade" id="buyNowModal" tabindex="-1" role="dialog" aria-labelledby="buyNowModalLabel"
+        aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content buy-model">
+                <div class="modal-header buy-model-header">
+                    <h5 class="modal-title" id="buyNowModalLabel"><i class="fas fa-shopping-cart"></i> Confirm Your
+                        Purchase</h5>
+                    <button type="button" class="buy-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>Order Summary</h4>
+                    <p><strong>Product:</strong> <span id="modalProductName"></span></p>
+                    <p><strong>Price:</strong> ₹<span id="modalProductPrice"></span></p>
+
+                    <!-- Quantity Selector -->
+                    <div class="quantity-selector">
+                        <button id="decreaseQuantity">-</button>
+                        <input type="text" id="quantity" value="1" readonly>
+                        <button id="increaseQuantity">+</button>
+                    </div>
+
+                    <p><strong>Total Price:</strong> ₹<span id="totalPrice"></span></p>
+
+                    <!-- Checkout Form -->
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name Surname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="youremail@example.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Shipping Address</label>
+                            <textarea class="form-control" id="address" rows="3"
+                                placeholder="123 Main Street, City, Country" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentMethod">Payment Method</label>
+                            <select class="form-control" id="paymentMethod" required>
+                                <option>Credit Card</option>
+                                <option>Debit Card</option>
+                                <option>Net Banking</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="buy-modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="placeOrderButton">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <a class="navbar-brand" id="logo1"><img src="Assets/Images/onlylogo.png" alt=""></a>
+            <a class="navbar-brand" id="logo2"><img src="Assets/Images/namelogo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-md-2">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item mx-md-2">
+                        <a class="nav-link" href="team.html">Out Team</a>
+                    </li>
+                    <li class="nav-item mx-md-2">
+                        <a class="nav-link active" href="#">Our Product</a>
+                    </li>
+                </ul>
+                <div class="ml-auto">
+                    <a class="btn login" id="loginBtn" href="#">Login</a>
+                    <a class="btn ml-2 signup" id="signupBtn" href="#">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+<div class="products">
+        <div class="container">
+            <h1 class="lg-title">Expertly Crafted PC Parts</h1>
+            <p class="text-dark">Elevate Your Performance with High-Quality Parts - Custom-built for Ultimate Speed,
+                Reliability and Efficiency</p>
+            <div class="product-items">
+
+                <!-- Fisrt product -->
+                <div class="product" data-product-name="Intel Core i9-12900K Desktop Processor" data-product-price="74999">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Assets/Images/i9.png" alt="product image">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="product-name">Intel Core i9-12900K Desktop Processor16</h2>
+                        </div>
+                        <p class="product-price">₹ 99,999</p>
+                        <p class="product-price">₹ 74,999</p>
+                        <div class="rating">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <div class="product-btns">
+                            <button type="button" class="btn-cart"> add to cart
+                                <span><i class="fas fa-plus"></i></span>
+                            </button>
+                            <button type="button" class="btn-buy" class="btn-buy" data-toggle="modal" data-target="#buyNowModal" class="btn-buy" data-toggle="modal" data-target="#buyNowModal"> buy now
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="off-info">
+                        <h2 class="sm-title">25% off</h2>
+                    </div>
+                </div>
+                <!-- Second product -->
+                <div class="product" data-product-name="Nvme 990 EVO SSD 1TB, PCIe 5.0 x2 M.2 2280" data-product-price="20669">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Assets/Images/Nvme SSD.png" alt="product image">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="product-name">Nvme 990 EVO SSD 1TB, PCIe 5.0 x2 M.2 2280</h2>
+                        </div>
+                        <p class="product-price">₹ 25,279</p>
+                        <p class="product-price">₹ 20,669</p>
+                        <div class="rating">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                        </div>
+                        <div class="product-btns">
+                            <button type="button" class="btn-cart"> add to cart
+                                <span><i class="fas fa-plus"></i></span>
+                            </button>
+                            <button type="button" class="btn-buy" class="btn-buy" data-toggle="modal" data-target="#buyNowModal"> buy now
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- third product -->
+                <div class="product" data-product-name="DDR4 3200MHz 16GB RAM Memory | SO-DIMM" data-product-price="8744">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Assets/Images/Ram.png" alt="product image">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="product-name">DDR4 3200MHz 16GB RAM Memory | SO-DIMM </h2>
+                        </div>
+                        <p class="product-price">₹ 10,999</p>
+                        <p class="product-price">₹ 8,744</p>
+                        <div class="rating">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <div class="product-btns">
+                            <button type="button" class="btn-cart"> add to cart
+                                <span><i class="fas fa-plus"></i></span>
+                            </button>
+                            <button type="button" class="btn-buy" class="btn-buy" data-toggle="modal" data-target="#buyNowModal"> buy now
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- fourth product -->
+                <div class="product" data-product-name="MSI MPG B550 Gaming Plus AMD Ryzen 5000 Am4 Ddr4 ATX Motherboardr" data-product-price="16456">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="/Assets/Images/motherboard.png" alt="product image">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="product-name">MSI MPG B550 Gaming Plus AMD Ryzen 5000 Am4 Ddr4 ATX Motherboard
+                            </h2>
+                        </div>
+                        <p class="product-price">₹ 20,700</p>
+                        <p class="product-price">₹ 16,456</p>
+                        <div class="rating">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <div class="product-btns">
+                            <button type="button" class="btn-cart"> add to cart
+                                <span><i class="fas fa-plus"></i></span>
+                            </button>
+                            <button type="button" class="btn-buy" class="btn-buy" data-toggle="modal" data-target="#buyNowModal"> buy now
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="off-info">
+                        <h2 class="sm-title">25% off</h2>
+                    </div>
+                </div>
+                <!-- fifth product -->
+                <div class="product" data-product-name="Asus ROG Swift 27-Inch(68.6cm)FHD Monitor" data-product-price="69960">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="Assets/Images/ASUS-ROG-Swift_prev_ui.png" alt="product image">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="product-name">Asus ROG Swift 27-Inch(68.6cm)FHD Monitor</h2>
+                        </div>
+                        <p class="product-price">₹ 88,000</p>
+                        <p class="product-price">₹ 69,960</p>
+                        <div class="rating">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <div class="product-btns">
+                            <button type="button" class="btn-cart"> add to cart
+                                <span><i class="fas fa-plus"></i></span>
+                            </button>
+                            <button type="button" class="btn-buy" class="btn-buy" data-toggle="modal" data-target="#buyNowModal"> buy now
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="off-info">
+                        <h2 class="sm-title">25% off</h2>
+                    </div>
+                </div>
+                <!-- sixth product -->
+                <div class="product" data-product-name="RPM Euro Games Gaming Keyboard" data-product-price="1970">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="Assets/Images/keyboard.png" alt="product image">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="product-name">RPM Euro Games Gaming Keyboard</h2>
+                        </div>
+                        <p class="product-price">₹ 2,480</p>
+                        <p class="product-price">₹ 1970</p>
+                        <div class="rating">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star-half-alt"></i></span>
+                        </div>
+                        <div class="product-btns">
+                            <button type="button" class="btn-cart"> add to cart
+                                <span><i class="fas fa-plus"></i></span>
+                            </button>
+                            <button type="button" class="btn-buy" class="btn-buy" data-toggle="modal" data-target="#buyNowModal"> buy now
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- seventh product -->
+                <div class="product" data-product-name="Zebronic RGB Gaming Mouse" data-product-price="550">
+                    <div class="product-content">
+                        <div class="product-img">
+                            <img src="Assets/Images/mouse.png" alt="product image">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-info-top">
+                            <h2 class="product-name">Zebronic RGB Gaming Mouse</h2>
+                        </div>
+                        <p class="product-price">₹ 749</p>
+                        <p class="product-price">₹ 550</p>
+                        <div class="rating">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="far fa-star"></i></span>
+                        </div>
+                        <div class="product-btns">
+                            <button type="button" class="btn-cart"> add to cart
+                                <span><i class="fas fa-plus"></i></span>
+                            </button>
+                            <button type="button" class="btn-buy" class="btn-buy" data-toggle="modal" data-target="#buyNowModal"> buy now
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section starts -->
+    <section class="footer" id="footer">
+        <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
+                href="https://www.linkedin.com/in/krunal-rathod-20b0882aa/" target="_blank"> Krunal
+                Rathod</a></h1>
+    </section>
+    <!-- Footer section ends -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="productscript.js"></script>
+</body>
+
+</html>

@@ -14,11 +14,143 @@
 </head>
 
 <body>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="loginModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel"><i class="fas fa-user"></i> Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="login-form">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your username"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                                required>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Sign Up Modal -->
+    <div class="modal fade" id="signupModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel"><i class="fas fa-user-plus"></i> Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="signup-form">
+                        <div class="form-group">
+                            <label for="newUsername">Username</label>
+                            <input type="text" class="form-control" id="newUsername" placeholder="Choose a username"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newEmail">Email</label>
+                            <input type="email" class="form-control" id="newEmail" placeholder="Enter your email"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">Password</label>
+                            <input type="password" class="form-control" id="newPassword" placeholder="Create a password"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword"
+                                placeholder="Confirm your password" required>
+                        </div>
+                        <button type="submit" class="btn">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buy Now Modal -->
+    <div class="modal fade" id="buyNowModal" tabindex="-1" role="dialog" aria-labelledby="buyNowModalLabel"
+        aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content buy-model">
+                <div class="modal-header buy-model-header">
+                    <h5 class="modal-title" id="buyNowModalLabel"><i class="fas fa-shopping-cart"></i> Confirm Your
+                        Purchase</h5>
+                    <button type="button" class="buy-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>Order Summary</h4>
+                    <p><strong>Product:</strong> <span id="modalProductName"></span></p>
+                    <p><strong>Price:</strong> ₹<span id="modalProductPrice"></span></p>
+
+                    <!-- Quantity Selector -->
+                    <div class="quantity-selector">
+                        <button id="decreaseQuantity">-</button>
+                        <input type="text" id="quantity" value="1" readonly>
+                        <button id="increaseQuantity">+</button>
+                    </div>
+
+                    <p><strong>Total Price:</strong> ₹<span id="totalPrice"></span></p>
+
+                    <!-- Checkout Form -->
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name Surname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="youremail@example.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Shipping Address</label>
+                            <textarea class="form-control" id="address" rows="3"
+                                placeholder="123 Main Street, City, Country" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentMethod">Payment Method</label>
+                            <select class="form-control" id="paymentMethod" required>
+                                <option>Credit Card</option>
+                                <option>Debit Card</option>
+                                <option>Net Banking</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="buy-modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="placeOrderButton">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- nav section starts -->
     <section class="navigation">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <!-- <a class="navbar-brand"><img src="logo.png" alt=""></a> -->
-            <a class="navbar-brand" id="logo1"><img src="Images/onlylogo.png" alt=""></a>
-            <a class="navbar-brand" id="logo2"><img src="Images/namelogo.png" alt=""></a>
+            <a class="navbar-brand" id="logo1"><img src="Assets/Images/onlylogo.png" alt=""></a>
+            <a class="navbar-brand" id="logo2"><img src="Assets/Images/namelogo.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,26 +158,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a> <!-- Example of active link -->
+                        <a class="nav-link active home-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item mx-md-2">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="#about">About Us</a>
                     </li>
                     <li class="nav-item mx-md-2">
-                        <a class="nav-link" href="#">Service</a>
+                        <a class="nav-link" href="#team">Out Team</a>
                     </li>
                     <li class="nav-item mx-md-2">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="#product1">Our Product</a>
                     </li>
                 </ul>
                 <div class="ml-auto">
-                    <a class="btn login" href="#">Login</a>
-                    <a class="btn ml-2 signup" href="#">Sign Up</a>
+                    <a class="btn login" id="loginBtn" href="#">Login</a>
+                    <a class="btn ml-2 signup" id="signupBtn" href="#">Sign Up</a>
                 </div>
             </div>
         </nav>
     </section>
+    <!-- nav section ends -->
 
+    <!-- hero section starts -->
     <section class="hero" id="home">
         <div class="container">
             <div class="row">
@@ -53,16 +187,16 @@
                     <h1>CUSTOM CORE</h1>
                     <h2>First Month On Us!</h2>
                     <p>Start Your journey to a high-performance custom PC that meets every expection.</p>
-                    <a href="#" class="btn">Customize Your PC</a>
+                    <a href="custom-pc-build.html" class="btn" target="_blank">Customize Your PC</a>
                 </div>
             </div>
         </div>
-
-        <!-- Spacer to create scrollable area -->
         <div class="spacer"></div>
     </section>
+    <!-- hero section ends -->
 
-    <section class="preproduct">
+    <!-- preproduct section starts -->
+    <section class="preproduct" id="preproduct">
         <div class="container mt-5">
             <h1 class="text-center h1">Custom Core Prebuilt Gaming PCs</h1>
             <p class="text-center p">We use the latest generation performance components and configurations to get you
@@ -71,10 +205,10 @@
 
             <div class="row mt-5">
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="product-card">
+                    <div class="product-card productt" data-product-name="Player: One" data-product-price="126518">
                         <div class="image-container">
-                            <img src="Images/player-1-ww-09-04-24-hero-white-badge-amd.png" class="product-image"
-                                alt="Player One PC">
+                            <img src="Assets/Images/player-1-ww-09-04-24-hero-white-badge-amd.png"
+                                class="product-image" alt="Player One PC">
                         </div>
                         <div class="product-details">
                             <h5 class="product-title">Player: One</h5>
@@ -85,18 +219,18 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <p class="product-price">$1,499.99</p>
+                            <p class="product-price">₹ 1,26,518</p>
                             <p class="card-text">H5 Flow RTX 3050 Gaming PC</p>
-                            <button class="shop-button">Shop Now</button>
+                            <button class="shop-button" data-toggle="modal" data-target="#buyNowModal">Shop Now</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="product-card">
+                    <div class="product-card productt" data-product-name="Player: Two" data-product-price="136928">
                         <div class="image-container">
-                            <img src="Images/player-two-base-ww-09-04-24-hero-white-badge.png" class="product-image"
-                                alt="PlayerTwo PC">
+                            <img src="Assets/Images/player-two-base-ww-09-04-24-hero-white-badge.png"
+                                class="product-image" alt="PlayerTwo PC">
                         </div>
                         <div class="product-details">
                             <h5 class="product-title">Player: Two</h5>
@@ -105,20 +239,20 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
                             </div>
-                            <p class="product-price">$1,599.99</p>
+                            <p class="product-price">₹ 1,36,928</p>
                             <p class="card-text">H6 Flow RTX 4070 Gaming PC</p>
-                            <button class="shop-button">Shop Now</button>
+                            <button class="shop-button" data-toggle="modal" data-target="#buyNowModal">Shop Now</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="product-card">
+                    <div class="product-card productt" data-product-name="Player: Three" data-product-price="193996">
                         <div class="image-container">
-                            <img src="Images/player-three-base-ww-09-04-24-hero-white-badge.png" class="product-image"
-                                alt="Player Three PC">
+                            <img src="Assets/Images/player-three-base-ww-09-04-24-hero-white-badge.png"
+                                class="product-image" alt="Player Three PC">
                         </div>
                         <div class="product-details">
                             <h5 class="product-title">Player: Three</h5>
@@ -126,21 +260,21 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
                             </div>
-                            <p class="product-price">$2,299.99</p>
+                            <p class="product-price">₹ 1,93,996</p>
                             <p class="card-text">H7 Flow RTX RTX 4070 Ti Gaming PC</p>
-                            <button class="shop-button">Shop Now</button>
+                            <button class="shop-button" data-toggle="modal" data-target="#buyNowModal">Shop Now</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="product-card">
+                    <div class="product-card productt" data-product-name="Player: One Prime" data-product-price="126518">
                         <div class="image-container">
-                            <img src="Images/player-1-prime-ww-09-04-24-hero-white-badge-amd.png" class="product-image"
-                                alt="Player One PC">
+                            <img src="Assets/Images/player-1-prime-ww-09-04-24-hero-white-badge-amd.png"
+                                class="product-image" alt="Player One PC">
                         </div>
                         <div class="product-details">
                             <h5 class="product-title">Player: One Prime</h5>
@@ -149,20 +283,20 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
                             </div>
-                            <p class="product-price">$1,249.00</p>
+                            <p class="product-price">₹ 1,05,394</p>
                             <p class="card-text">H5 Flow RTX 4060 Ti Gaming PC </p>
-                            <button class="shop-button">Shop Now</button>
+                            <button class="shop-button" data-toggle="modal" data-target="#buyNowModal">Shop Now</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="product-card">
+                    <div class="product-card productt" data-product-name="Player: Two Prime" data-product-price="111120">
                         <div class="image-container">
-                            <img src="Images/player-two-premium-ww-09-04-24-hero-white-amd.png" class="product-image"
-                                alt="Player One PC">
+                            <img src="Assets/Images/player-two-premium-ww-09-04-24-hero-white-amd.png"
+                                class="product-image" alt="Player One PC">
                         </div>
                         <div class="product-details">
                             <h5 class="product-title">Player: Two Prime</h5>
@@ -173,18 +307,18 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <p class="product-price">$2,099.00</p>
+                            <p class="product-price">₹ 1,11,120</p>
                             <p class="card-text">H6 Flow RGB RTX 4070 Ti SUPER Gaming PC</p>
-                            <button class="shop-button">Shop Now</button>
+                            <button class="shop-button" data-toggle="modal" data-target="#buyNowModal">Shop Now</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="product-card">
+                    <div class="product-card productt" data-product-name="Player: Three Prime" data-product-price="312133">
                         <div class="image-container">
-                            <img src="Images/player-three-prime-ww-09-04-24-hero-white-amd.png" class="product-image"
-                                alt="Player One PC">
+                            <img src="Assets/Images/player-three-prime-ww-09-04-24-hero-white-amd.png"
+                                class="product-image" alt="Player One PC">
                         </div>
                         <div class="product-details">
                             <h5 class="product-title">Player: Three Prime</h5>
@@ -192,12 +326,12 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
                             </div>
-                            <p class="product-price">$3,699.00</p>
+                            <p class="product-price">₹ 3,12,133</p>
                             <p class="card-text">H9 Elite RTX 4090 Gaming PC</p>
-                            <button class="shop-button">Shop Now</button>
+                            <button class="shop-button" data-toggle="modal" data-target="#buyNowModal">Shop Now</button>
                         </div>
                     </div>
                 </div>
@@ -205,6 +339,290 @@
             </div>
         </div>
     </section>
+    <!-- preproduct section ends -->
+
+    <!-- about section starts -->
+    <section class="about" id="about">
+        <div class="container about-section">
+            <h2 class="heading">About <span>Us</span></h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="Assets/Images/logo-removebg.png" alt="Logo" class="logo">
+                </div>
+                <div class="col-md-8">
+                    <p>Welcome to Custom Core, where passion meets performance in the world of gaming PCs.We are
+                        dedicated
+                        to helping enthusiasts and beginners alike build their ultimate gaming rigs with expert guidance
+                        and
+                        a curated selection of high-quality components.Our team of professionals is committed to
+                        excellence
+                        and innovation. Whether you're seeking the latest GPUs, powerful CPUs, or cutting-edge
+                        peripherals,
+                        we provide detailed reviews, tutorials, and recommendations to empower your gaming journey. Join
+                        our
+                        community of gamers and tech aficionados as we navigate the ever-evolving landscape of PC gaming
+                        hardware together.Gamesouk.in (Souk means marketplace) is your ultimate destination for all
+                        Gaming
+                        Needs( Prebuilt Pc, Gaming Consoles, Pc Parts, Gaming Accessories). You will definitely find
+                        solutions to all your gaming needs right under one roof with the best quality & cheapest price
+                        like
+                        no other. Custom Core is run by Krunal Rathod.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="morebtn">
+            <a href="about.html" class="btn"><span>Read More</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+    <!-- about section ends -->
+
+    <!-- team section starts -->
+    <section class="team" id="team">
+        <div class="container my-5">
+            <h2 class="teamheading mb-4 text-center">Meet <span>Our Team</span></h2>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="Assets/Images/Krunal_our-teamimg.jpg" class="card-img-top" alt="Member 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Krunal Rathod</h5>
+                            <p class="card-text">Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="Assets/Images/Bhavik_our-teamimg.jpg" class="card-img-top" alt="Member 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Bhavik Vavadiya</h5>
+                            <p class="card-text">CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="Assets/Images/Arman_our-teamimg.jpg" class="card-img-top" alt="Member 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Arman Mahetar</h5>
+                            <p class="card-text">UX/UI Designer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="teammorebtn">
+            <a href="team.html" class="btn"><span>View All Members</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+    <!-- team section ends -->
+
+    <!-- product section starts -->
+    <section class="product1" id="product1">
+        <div class="products">
+            <div class="container">
+                <h1 class="lg-title">Expertly Crafted PC Parts</h1>
+                <p class="text-dark">Elevate Your Performance with High-Quality Parts - Custom-built for Ultimate Speed,
+                    Reliability and Efficiency</p>
+
+                <div class="product-items">
+
+                    <div class="product" data-product-name="Intel Core i9-12900K Desktop Processor"
+                        data-product-price="74999">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="Assets/Images/i9.png" alt="product image">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="product-name">Intel Core i9-12900K Desktop Processor16</h2>
+                            </div>
+                            <p class="product-price mrp">₹ 99,999</p>
+                            <p class="product-price">₹ 74,999</p>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart"> add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" data-toggle="modal" data-target="#buyNowModal"
+                                    data-toggle="modal" data-target="#buyNowModal"> buy now
+                                    <span><i class="fas fa-shopping-cart"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="off-info">
+                            <h2 class="sm-title">25% off</h2>
+                        </div>
+                    </div>
+
+                    <div class="product" data-product-name="Nvme 990 EVO SSD 1TB, PCIe 5.0 x2 M.2 2280"
+                        data-product-price="20669">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="Assets/Images/Nvme SSD.png" alt="product image">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="product-name">Nvme 990 EVO SSD 1TB, PCIe 5.0 x2 M.2 2280</h2>
+                            </div>
+                            <p class="product-price mrp">₹ 25,279</p>
+                            <p class="product-price">₹ 20,669</p>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star-half-alt"></i></span>
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart"> add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" data-toggle="modal" data-target="#buyNowModal">
+                                    buy now
+                                    <span><i class="fas fa-shopping-cart"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product" data-product-name="DDR4 3200MHz 16GB RAM Memory | SO-DIMM"
+                        data-product-price="8744">
+                        <div class="product-content">
+                            <div class="product-img">
+                                <img src="Assets/Images/Ram.png" alt="product image">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-info-top">
+                                <h2 class="product-name">DDR4 3200MHz 16GB RAM Memory | SO-DIMM |</h2>
+                            </div>
+                            <p class="product-price mrp">₹ 10,999</p>
+                            <p class="product-price">₹ 8,744</p>
+                            <div class="rating">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star-half-alt"></i></span>
+                                <span><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="product-btns">
+                                <button type="button" class="btn-cart"> add to cart
+                                    <span><i class="fas fa-plus"></i></span>
+                                </button>
+                                <button type="button" class="btn-buy" data-toggle="modal" data-target="#buyNowModal">
+                                    buy now
+                                    <span><i class="fas fa-shopping-cart"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="productmorebtn">
+            <a href="product.html" class="btn"><span>View All Products</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+    <!-- product section ends -->
+
+    <!-- service section starts -->
+    <section class="services" id="services">
+        <h2 class="serviceheading mb-4 text-center">Our <span>Services</span></h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="service">
+                        <h3>Custom PC Building</h3>
+                        <p>Tailored builds based on your requirements and budget.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="service">
+                        <h3>PC Component Sales</h3>
+                        <p>A wide range of high-quality components for all your needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="service">
+                        <h3>Upgrade Consultation</h3>
+                        <p>Expert advice on upgrading your existing system for better performance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="service">
+                        <h3>Technical Support</h3>
+                        <p>Ongoing support and troubleshooting for your custom PC.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service section ends -->
+
+    <!-- contact section starts -->
+    <section class="contact" id="contact">
+        <h2 class="conheading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+        <div class="container">
+            <div class="content">
+                <div class="image-box">
+                    <img draggable="false" src="assets/Images/contact1.png" alt="">
+                </div>
+                <form id="contact-form">
+
+                    <div class="form-group">
+                        <div class="field">
+                            <input type="text" name="name" placeholder="Name" required>
+                            <i class='fas fa-user'></i>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="email" placeholder="Email" required>
+                            <i class='fas fa-envelope'></i>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="phone" placeholder="Phone">
+                            <i class='fas fa-phone-alt'></i>
+                        </div>
+                        <div class="message">
+                            <textarea placeholder="Message" name="message" required></textarea>
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                    </div>
+                    <div class="button-area">
+                        <button type="submit">
+                            Submit <i class="fa fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- contact section ends -->
+
+    <!-- Footer section starts -->
+    <section class="footer" id="footer">
+        <footer class="copyright">
+            <p>&copy; 2024 Custom Core. All Rights Reserved.</p>
+        </footer>
+        <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
+                href="https://www.linkedin.com/in/krunal-rathod-20b0882aa/" target="_blank"> Krunal Rathod</a></h1>
+    </section>
+    <!-- Footer section ends -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

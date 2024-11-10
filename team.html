@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="teamstyle.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Custom Core Team</title>
+</head>
+
+<body>
+    <section class="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <a class="navbar-brand" id="logo1"><img src="Assets/Images/onlylogo.png" alt=""></a>
+            <a class="navbar-brand" id="logo2"><img src="Assets/Images/namelogo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-md-2">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item mx-md-2">
+                        <a class="nav-link active" href="#">Our Team</a>
+                    </li>
+                    <li class="nav-item mx-md-2">
+                        <a class="nav-link" href="product.html">Our Product</a>
+                    </li>
+                </ul>
+                <div class="ml-auto">
+                    <a class="btn login" id="loginBtn" href="#">Login</a>
+                    <a class="btn ml-2 signup" id="signupBtn" href="#">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+<!-- The Modal -->
+<div class="modal fade" id="loginModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+aria-labelledby="loginModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel"><i class="fas fa-user"></i> Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your username"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                        required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- The Sign Up Modal -->
+<div class="modal fade" id="signupModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLabel"><i class="fas fa-user-plus"></i> Sign Up</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form class="signup-form">
+                <div class="form-group">
+                    <label for="newUsername">Username</label>
+                    <input type="text" class="form-control" id="newUsername" placeholder="Choose a username" required>
+                </div>
+                <div class="form-group">
+                    <label for="newEmail">Email</label>
+                    <input type="email" class="form-control" id="newEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">Password</label>
+                    <input type="password" class="form-control" id="newPassword" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+
+    <section class="team">
+        <div class="container my-5">
+            <h2 class="heading mb-4 text-center">Meet <span>Our Team</span></h2>
+            <div class="row">
+                <!-- Team Member 1 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="/Assets/Images/Krunal_our-teamimg.jpg" class="card-img-top" alt="Member 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Krunal Rathod</h5>
+                            <p class="card-text">Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="/Assets/Images/Bhavik_our-teamimg.jpg" class="card-img-top" alt="Member 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Bhavik Vavadiya</h5>
+                            <p class="card-text">CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="/Assets/Images/Arman_our-teamimg.jpg" class="card-img-top" alt="Member 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Arman Mahetar</h5>
+                            <p class="card-text">UX/UI Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="Assets/Images/Hardik_our-teamimg.jpg" class="card-img-top" alt="Member 4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Hardik Makwana</h5>
+                            <p class="card-text">Full Stack Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 5 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="Assets/Images/Dhruv_our-teamimg.jpg" class="card-img-top" alt="Member 5">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Dhruv Dhanani</h5>
+                            <p class="card-text">Marketing Specialist</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 6 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="Assets/Images/Rutvik_our-teamimg.jpg" class="card-img-top" alt="Member 6">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Rutvik Sarvaiya</h5>
+                            <p class="card-text">Cybersecurity Analyst</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 7 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="Assets/Images/Vahid_our-teamimg.jpg" class="card-img-top" alt="Member 7">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Vahid Mahetar</h5>
+                            <p class="card-text">Project Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+    <!-- Footer section starts -->
+<section class="footer" id="footer">
+    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
+        href="https://www.linkedin.com/in/krunal-rathod-20b0882aa/" target="_blank"> Krunal Rathod</a></h1>
+</section>
+<!-- Footer section ends -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="teamscript.js"></script>
+</body>
+
+</html>

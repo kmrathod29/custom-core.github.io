@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible=" IE="edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom PC Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="custom-pc-buildstyle.css">
+</head>
+<body>
+    
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Build Your Custom PC</h1>
+        
+        <!-- Dropdown Section -->
+        <div class="row">
+            <!-- Select Processor Dropdown -->
+            <div class="col-12 mb-3">
+                <label for="processor" class="form-label-with-icon dropdown-label">
+                    <i class="fas fa-microchip"></i> Select Processor
+                </label>
+                <select class="form-select custom-dropdown" id="processor">
+                    <option selected disabled>Select a Processor</option>
+                    <option value="21095">Intel i5 - ₹21,095</option>
+                    <option value="29533">Intel i7 - ₹29,533</option>
+                    <option value="42190">Intel i9 - ₹42,190</option>
+                </select>
+            </div>
+
+            <!-- Select Motherboard Dropdown -->
+            <div class="col-12 mb-3">
+                <label for="motherboard" class="form-label-with-icon dropdown-label">
+                    <i class="fas fa-cogs"></i> Select Motherboard
+                </label>
+                <select class="form-select custom-dropdown" id="motherboard">
+                    <option selected disabled>Select a Motherboard</option>
+                    <option value="12657">ASUS B450 - ₹12,657</option>
+                    <option value="16876">Gigabyte X570 - ₹16,876</option>
+                    <option value="25314">MSI Z690 - ₹25,314</option>
+                </select>
+            </div>
+
+            <!-- Select RAM Dropdown -->
+            <div class="col-12 mb-3">
+                <label for="ram" class="form-label-with-icon dropdown-label">
+                    <i class="fas fa-memory"></i> Select RAM
+                </label>
+                <select class="form-select custom-dropdown" id="ram">
+                    <option selected disabled>Select RAM</option>
+                    <option value="4219">8GB - ₹4,219</option>
+                    <option value="8438">16GB - ₹8,438</option>
+                    <option value="16876">32GB - ₹16,876</option>
+                </select>
+            </div>
+
+            <!-- Select Storage 1 Dropdown -->
+            <div class="col-12 mb-3">
+                <label for="storage1" class="form-label-with-icon dropdown-label">
+                    <i class="fas fa-hdd"></i> Select Storage 1
+                </label>
+                <select class="form-select custom-dropdown" id="storage1">
+                    <option selected disabled>Select Storage 1</option>
+                    <option value="6328">500GB SSD - ₹6,328</option>
+                    <option value="12657">1TB SSD - ₹12,657</option>
+                    <option value="4219">1TB HDD - ₹4,219</option>
+                </select>
+            </div>
+
+            <!-- Select Storage 2 Dropdown -->
+            <div class="col-12 mb-3">
+                <label for="storage2" class="form-label-with-icon dropdown-label">
+                    <i class="fas fa-hdd"></i> Select Storage 2
+                </label>
+                <select class="form-select custom-dropdown" id="storage2">
+                    <option selected disabled>Select Storage 2</option>
+                    <option value="6328">500GB SSD - ₹6,328</option>
+                    <option value="12657">1TB SSD - ₹12,657</option>
+                    <option value="4219">1TB HDD - ₹4,219</option>
+                </select>
+            </div>
+
+            <!-- Select Cabinet Dropdown -->
+            <div class="col-12 mb-3">
+                <label for="cabinet" class="form-label-with-icon dropdown-label">
+                    <i class="fas fa-box"></i> Select Cabinet
+                </label>
+                <select class="form-select custom-dropdown" id="cabinet">
+                    <option selected disabled>Select a Cabinet</option>
+                    <option value="8438">NZXT H510 - ₹8,438</option>
+                    <option value="10125">Corsair 4000D - ₹10,125</option>
+                    <option value="7500">Cooler Master MasterBox - ₹7,500</option>
+                </select>
+            </div>
+
+            <!-- Select Cabinet Fan Dropdown -->
+            <div class="col-12 mb-3">
+                <label for="cabinet-fan" class="form-label-with-icon dropdown-label">
+                    <i class="fas fa-fan"></i> Select Cabinet Fan
+                </label>
+                <select class="form-select custom-dropdown" id="cabinet-fan">
+                    <option selected disabled>Select Cabinet Fan</option>
+                    <option value="2531">Cooler Master Fan - ₹2,531</option>
+                    <option value="4387">Corsair 120mm Fan - ₹4,387</option>
+                    <option value="3375">Noctua NF-F12 - ₹3,375</option>
+                </select>
+            </div>
+
+            <!-- Select Cooler Dropdown -->
+            <div class="col-12 mb-3">
+                <label for="cooler" class="form-label-with-icon dropdown-label">
+                    <i class="fas fa-thermometer-half"></i> Select Cooler
+                </label>
+                <select class="form-select custom-dropdown" id="cooler">
+                    <option selected disabled>Select a Cooler</option>
+                    <option value="5062">Corsair Hydro 120 - ₹5,062</option>
+                    <option value="6750">NZXT Kraken X63 - ₹6,750</option>
+                    <option value="8432">Cooler Master Hyper 212 - ₹8,432</option>
+                </select>
+            </div>
+
+            <!-- Select Graphic Card Dropdown -->
+            <div class="col-12 mb-3">
+                <label for="graphic-card" class="form-label-with-icon dropdown-label">
+                    <i class="fas fa-video"></i> Select Graphic Card
+                </label>
+                <select class="form-select custom-dropdown" id="graphic-card">
+                    <option selected disabled>Select a Graphic Card</option>
+                    <option value="33752">NVIDIA GTX 1660 - ₹33,752</option>
+                    <option value="50628">NVIDIA RTX 3060 - ₹50,628</option>
+                    <option value="67504">NVIDIA RTX 3080 - ₹67,504</option>
+                </select>
+            </div>
+
+            <!-- Select Power Supply Unit Dropdown -->
+            <div class="col-12 mb-3">
+                <label for="psu" class="form-label-with-icon dropdown-label">
+                    <i class="fas fa-plug"></i> Select Power Supply Unit
+                </label>
+                <select class="form-select custom-dropdown" id="psu">
+                    <option selected disabled>Select a PSU</option>
+                    <option value="4219">Corsair 550W - ₹4,219</option>
+                    <option value="6750">EVGA 750W - ₹6,750</option>
+                    <option value="10125">Seasonic 850W - ₹10,125</option>
+                </select>
+            </div>
+
+            <!-- Select Monitor Dropdown -->
+            <div class="col-12 mb-3">
+                <label for="monitor" class="form-label-with-icon dropdown-label">
+                    <i class="fas fa-desktop"></i> Select Monitor
+                </label>
+                <select class="form-select custom-dropdown" id="monitor">
+                    <option selected disabled>Select a Monitor</option>
+                    <option value="12657">Acer 24" - ₹12,657</option>
+                    <option value="21095">Samsung 27" - ₹21,095</option>
+                    <option value="29533">LG 32" - ₹29,533</option>
+                </select>
+            </div>
+
+            <!-- Select Keyboard Dropdown -->
+            <div class="col-12 mb-3">
+                <label for="keyboard" class="form-label-with-icon dropdown-label">
+                    <i class="fas fa-keyboard"></i> Select Keyboard
+                </label>
+                <select class="form-select custom-dropdown" id="keyboard">
+                    <option selected disabled>Select a Keyboard</option>
+                    <option value="2531">Logitech K120 - ₹2,531</option>
+                    <option value="4219">Razer BlackWidow - ₹4,219</option>
+                    <option value="6750">Corsair K70 - ₹6,750</option>
+                </select>
+            </div>
+
+            <!-- Select Mouse Dropdown -->
+            <div class="col-12 mb-3">
+                <label for="mouse" class="form-label-with-icon dropdown-label">
+                    <i class="fas fa-mouse"></i> Select Mouse
+                </label>
+                <select class="form-select custom-dropdown" id="mouse">
+                    <option selected disabled>Select a Mouse</option>
+                    <option value="1687">Logitech G102 - ₹1,687</option>
+                    <option value="3375">Razer DeathAdder - ₹3,375</option>
+                    <option value="5062">Corsair Dark Core - ₹5,062</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Total Price Section -->
+        <div class="total-card">
+            <div class="card-body">
+                <h5 class="card-title">Total Price</h5>
+                <p class="card-text" id="total-price">₹ 0</p>
+                <button class="btn btn-primary" id="proceedButton">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section starts -->
+<section class="footer" id="footer">
+    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
+        href="https://www.linkedin.com/in/krunal-rathod-20b0882aa/" target="_blank"> Krunal Rathod</a></h1>
+</section>
+<!-- Footer section ends -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="custom-pc-build-script.js"></script>
+
+</body>
+</html>

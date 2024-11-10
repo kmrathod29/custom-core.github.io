@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    padding-top: 6em;
+    padding-left: 0.5rem;
+}
+
+/* Navbar Start */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    margin-right: 0.1rem;
+}
+
+#logo1 img {
+    width: 4rem;
+    height: auto;
+}
+
+#logo2 img {
+    width: 15rem;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    color: black !important;
+    font-size: 18px;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: #2506ad !important;
+    text-decoration: underline !important;
+}
+
+nav a.active {
+    color: #2506ad !important;
+    text-decoration: underline !important;
+}
+
+.navbar-nav {
+    justify-content: center;
+    margin-left: 0.5rem;
+    padding-left: 5rem;
+}
+
+.navbar-collapse {
+    justify-content: center;
+}
+
+.navigation .ml-auto {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+
+}
+
+.navbar .login {
+    white-space: nowrap;
+    transition: transform 0.2s;
+    color: #2506ad;
+    padding: 5px 13px;
+    font-size: 16px;
+    border: 2px solid #2506ad;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbar .signup {
+    white-space: nowrap;
+    transition: transform 0.2s;
+    color: white;
+    padding: 5px 13px;
+    font-size: 16px;
+    background-color: #2506ad;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navigation .btn:hover {
+    transform: scale(1.1);
+}
+
+/* Basic styling for modal */
+.modal-content {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.close {
+    color: #2506ad;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    cursor: pointer;
+}
+
+.login-form input {
+    border: 1px solid #2506ad;
+    border-radius: 4px;
+}
+
+.login-form button {
+    background-color: #2506ad;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.login-form button:hover {
+    background-color: #1e0596;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+/* Styling for Sign Up title with icon */
+.modal-header .modal-title {
+    display: flex;
+    align-items: center;
+}
+
+.modal-header .modal-title i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.signup-form button {
+    background-color: #2506ad;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+}
+
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    .navigation .ml-auto {
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navigation .ml-auto .btn {
+        margin: 5px 0;
+    }
+}
+
+/* Product Section */
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    width: 88vw;
+    margin: 0 auto;
+}
+
+.lg-title,
+.md-title,
+.sm-title {
+    padding: 0.6rem 0;
+    text-transform: capitalize;
+}
+
+.lg-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1.3rem 0;
+    opacity: 0.9;
+}
+
+.md-title {
+    font-size: 2rem;
+}
+
+.sm-title {
+    font-weight: 300;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.text-dark {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    opacity: 0.5;
+    margin: 0.4rem 0;
+    text-align: center;
+}
+
+.products {
+    background: #f8f9fabe;
+    padding: 3.2rem 0;
+}
+
+.products .text-light {
+    text-align: center;
+    width: 70%;
+    margin: 0.9rem auto;
+}
+
+.product {
+    margin: 2rem;
+    position: relative;
+}
+
+.product-content {
+    background: #ededed;
+    padding: 3rem 0.5rem 2rem 0.5rem;
+    cursor: pointer;
+}
+
+.product-img {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    transition: background 0.5s ease;
+}
+
+.product-btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.4rem;
+}
+
+.btn-cart,
+.btn-buy {
+    background: transparent;
+    border: 1px solid black;
+    padding: 0.8rem 0;
+    width: 125px;
+    font-family: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all 0.6s ease;
+}
+
+.btn-cart {
+    background: black;
+    color: white;
+    white-space: nowrap;
+}
+
+.btn-cart:hover {
+    background: #5856d6;
+}
+
+.btn-buy {
+    background: white;
+    white-space: nowrap;
+}
+
+.btn-buy:hover {
+    background: #5856d6;
+    color: #fff;
+}
+
+.product-info {
+    background: white;
+    padding: 2rem;
+}
+
+.product-info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating span {
+    color: #5856d6;
+}
+
+.product-name {
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.product-price {
+    padding-top: 0.6rem;
+    padding-right: 0.6rem;
+    display: inline-block;
+}
+
+.product-price:first-of-type {
+    text-decoration: line-through;
+    color: #5856d6;
+}
+
+.product-img img {
+    transition: transform 0.6s ease;
+}
+
+.product:hover .product-img img {
+    transform: scale(1.1);
+}
+
+.off-info .sm-title {
+    background: #5856d6;
+    color: white;
+    display: inline-block;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    z-index: 1;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+/* Styling for the Buy Now Modal */
+.buy-model {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buy-model-header {
+    border-bottom: 2px solid #2506ad;
+    color: #2506ad;
+}
+
+.buy-model-header .modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.buy-model-header .modal-title i {
+    margin-right: 10px;
+}
+
+.buy-close {
+    color: #2506ad;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.buy-close:hover {
+    color: #000;
+}
+
+.buy-now-form .form-control {
+    border: 1px solid #2506ad;
+    border-radius: 5px;
+}
+
+.buy-modal-footer .btn-primary {
+    background-color: #2506ad;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.buy-modal-footer{
+    padding-bottom: 2rem;
+}
+
+.btn-secondary {
+    margin-left: 10rem;
+}
+
+.buy-modal-footer .btn-primary:hover {
+    background-color: #1e0596;
+}
+
+/* Styling for Quantity Selector */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.quantity-selector button {
+    background-color: #2506ad;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.quantity-selector button:hover {
+    background-color: #1e0596;
+}
+
+.quantity-selector input {
+    width: 60px;
+    text-align: center;
+    border: 1px solid #2506ad;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 992px) {
+    .product-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .product-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+}
+
+@media screen and (min-width: 1336px) {
+    .product-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .flex {
+        height: 60vh;
+    }
+}
+
+/* footer section */
+.credit {
+    padding: 0rem 0 0 0;
+    text-align: center;
+    font-size: 1.2rem !important;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    color: black;
+    border-top: 0.1rem solid #fff3;
+}
+
+.credit a {
+    color: #1a047e;
+}
+
+.credit .fa {
+    color: #e90606;
+    margin: 1 0.3rem;
+    font-size: 1.2rem;
+    animation: pound 0.35s infinite alternate;
+}
+
+.footer {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}

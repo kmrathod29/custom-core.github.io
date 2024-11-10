@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="aboutstyle.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Custom Core About Us</title>
+</head>
+
+<body>
+    <section class="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <a class="navbar-brand" id="logo1"><img src="Assets/Images/onlylogo.png" alt=""></a>
+            <a class="navbar-brand" id="logo2"><img src="Assets/Images/namelogo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-md-2">
+                        <a class="nav-link active" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item mx-md-2">
+                        <a class="nav-link" href="team.html">Our Team</a>
+                    </li>
+                    <li class="nav-item mx-md-2">
+                        <a class="nav-link" href="product.html">Our Products</a>
+                    </li>
+                </ul>
+                <div class="ml-auto">
+                    <a class="btn login" id="loginBtn" href="#">Login</a>
+                    <a class="btn ml-2 signup" id="signupBtn" href="#">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+<!-- The Modal -->
+<div class="modal fade" id="loginModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+aria-labelledby="loginModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel"><i class="fas fa-user"></i> Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your username"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                        required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- The Sign Up Modal -->
+<div class="modal fade" id="signupModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLabel"><i class="fas fa-user-plus"></i> Sign Up</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form class="signup-form">
+                <div class="form-group">
+                    <label for="newUsername">Username</label>
+                    <input type="text" class="form-control" id="newUsername" placeholder="Choose a username" required>
+                </div>
+                <div class="form-group">
+                    <label for="newEmail">Email</label>
+                    <input type="email" class="form-control" id="newEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">Password</label>
+                    <input type="password" class="form-control" id="newPassword" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+
+    <section class="about">
+        <div class="container about-section">
+            <h2 class="heading">About <span>Us</span></h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="Assets/Images/logo-removebg.png" alt="Logo" class="logo">
+                </div>
+                <div class="col-md-8">
+                    <p>Welcome to Custom Core, where passion meets performance in the world of gaming PCs.We are
+                        dedicated
+                        to helping enthusiasts and beginners alike build their ultimate gaming rigs with expert guidance
+                        and
+                        a curated selection of high-quality components.Our team of professionals is committed to
+                        excellence
+                        and innovation. Whether you're seeking the latest GPUs, powerful CPUs, or cutting-edge
+                        peripherals,
+                        we provide detailed reviews, tutorials, and recommendations to empower your gaming journey. Join
+                        our
+                        community of gamers and tech aficionados as we navigate the ever-evolving landscape of PC gaming
+                        hardware together.Gamesouk.in (Souk means marketplace) is your ultimate destination for all
+                        Gaming
+                        Needs( Prebuilt Pc, Gaming Consoles, Pc Parts, Gaming Accessories). You will definitely find
+                        solutions to all your gaming needs right under one roof with the best quality & cheapest price
+                        like
+                        no other. Custom Core is run by Krunal Rathod.</p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <h2>Vision</h2>
+                    <ul>
+                        <li>Our vision is to become the ultimate destination for gamers seeking high-performance PC
+                            components,
+                            providing unparalleled selection, expert guidance, and a seamless shopping experience.To be
+                            a
+                            global
+                            leader in our industry, setting the standards for quality and innovation.</li>
+                        <li>We aim to be a leader in the custom PC industry, setting benchmarks for quality,
+                            performance, and customer satisfaction. Our commitment to using only the best components
+                            ensures that our builds are not only powerful but also reliable and long-lasting.</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h2>Mission</h2>
+                    <ul>
+                        <li>To curate a comprehensive catalog of the latest and most reliable gaming PC parts, ensuring
+                            every gamer finds exactly what they need to build their dream rig.</li>
+                        <li>To empower our customers with in-depth knowledge and support, guiding them through every
+                            step of
+                            the PC building process.</li>
+                        <li>To foster a community where gamers can share knowledge, experiences, and innovations,
+                            creating a
+                            hub for enthusiasts worldwide.</li>
+                        <li>To deliver exceptional services and solutions that exceed our clients' expectations.</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h2>Goals</h2>
+                    <ul>
+                        <li>Offer a diverse range of products, from budget-friendly options to premium, cutting-edge
+                            components, catering to gamers of all levels</li>
+                        <li>Provide exceptional customer service, including timely support, detailed product
+                            information,
+                            and reliable shipping.</li>
+                        <li>Establish partnerships with leading brands to guarantee access to the latest technology and
+                            exclusive deals for our customers.</li>
+                        <li>Build a robust online platform that is user-friendly, informative, and interactive,
+                            enhancing
+                            the overall shopping experience.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer section starts -->
+<section class="footer" id="footer">
+     <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
+         href="https://www.linkedin.com/in/krunal-rathod-20b0882aa/" target="_blank"> Krunal Rathod</a></h1>
+ </section>
+ <!-- Footer section ends -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="aboutcript.js"></script>
+</body>
+</html>
