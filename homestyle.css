@@ -14,7 +14,7 @@ body {
 }
 
 .hero {
-    background-image: url('home-hero-bg-2xl.png');
+    background-image: url("Images/home-hero-bg-2xl.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -385,6 +385,11 @@ h1 {
         padding-top: 100rem;
         padding-bottom: 100rem;
     }
+
+    h1 {
+        margin-top: 85px !important;
+    }
+
 }
 
 /* About Section Start */
@@ -485,12 +490,21 @@ h1 {
 
 @media (max-width: 576px) {
 
+    .about {
+        margin-top: 7rem;
+        /* height: 60rem; */
+    }
+
+    .heading {
+        padding-top: 33rem;
+    }
+
     .about-section {
         padding-bottom: 30em;
     }
 
     .morebtn {
-        margin-top: -5rem;
+        margin-top: 2rem;
     }
 
 }
@@ -541,7 +555,7 @@ h1 {
     padding: 10px 20px;
 }
 
-.buy-modal-footer{
+.buy-modal-footer {
     padding-bottom: 2rem;
 }
 
@@ -666,6 +680,17 @@ h1 {
     transform: translateX(5px);
 }
 
+@media (max-width: 992px) {
+    .teamheading {
+        padding-top: 57rem;
+    }
+
+    .teammorebtn {
+        padding-top: 59rem;
+    }
+
+}
+
 /* product section */
 img {
     width: 100%;
@@ -709,17 +734,6 @@ img {
     opacity: 0.5;
     margin: 0.4rem 0;
     text-align: center;
-}
-
-@media (max-width: 992px) {
-    .teamheading {
-        padding-top: 53rem;
-    }
-
-    .teammorebtn {
-        padding-top: 53rem;
-    }
-
 }
 
 .products {
@@ -826,7 +840,7 @@ img {
     display: inline-block;
 }
 
- .mrp {
+.mrp {
     text-decoration: line-through;
     color: #5856d6;
 }
@@ -859,7 +873,7 @@ img {
     justify-content: center;
     position: relative;
     margin-top: -2rem;
-    z-index: 10;
+    z-index: 1;
     padding-bottom: 3rem;
 }
 
@@ -931,6 +945,10 @@ img {
     .products {
         padding: 34rem 0;
     }
+
+    .productmorebtn {
+        margin-top: 4rem;
+    }
 }
 
 /* service section */
@@ -989,6 +1007,10 @@ img {
 
     .serviceheading {
         padding-bottom: 16rem;
+    }
+
+    .services .row {
+        padding-bottom: 27rem;
     }
 }
 
@@ -1189,12 +1211,6 @@ form .button-area {
     }
 }
 
-@media (max-width:992px) {
-    .footer{
-        margin-top: -7rem !important;
-    }
-}
-
 /* footer section */
 .credit {
     padding: 0rem 0 0 0;
@@ -1222,9 +1238,20 @@ form .button-area {
     padding: 0rem 0;
     font-size: 1rem;
     color: #333;
-    margin-top: 4rem;
+    margin-top: 1rem;
 }
 
-.copyright{
+.copyright {
     font-size: 0.8rem;
+}
+
+@media (max-width:992px) {
+    .footer {
+        margin-top: -7rem !important;
+    }
+
+    .footer h1 {
+         margin-top: 0px !important; 
+    }
+
 }
